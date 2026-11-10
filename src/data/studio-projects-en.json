@@ -1,0 +1,112 @@
+[
+  {
+    "name": "ARAH",
+    "description": "Creative and campaign agency",
+    "image": "/images/projects/studio-01.webp"
+  },
+  {
+    "name": "Media Quest",
+    "description": "Marketing and brand growth agency",
+    "image": "/images/projects/studio-02.webp"
+  },
+  {
+    "name": "Northstar Studio",
+    "description": "Business growth studio",
+    "image": "/images/projects/studio-03.webp"
+  },
+  {
+    "name": "NŌVA Studio",
+    "description": "Creative studio and digital experiences",
+    "image": "/images/projects/studio-04.webp"
+  },
+  {
+    "name": "Room & Pillar",
+    "description": "Venture studio and business portfolio",
+    "image": "/images/projects/studio-05.webp"
+  },
+  {
+    "name": "CONCRÈTE",
+    "description": "Property management",
+    "image": "/images/projects/studio-06.webp"
+  },
+  {
+    "name": "Ruang Karya",
+    "description": "Residential interior design",
+    "image": "/images/projects/studio-07.webp"
+  },
+  {
+    "name": "Ruang Reka",
+    "description": "Architecture studio",
+    "image": "/images/projects/studio-08.webp"
+  },
+  {
+    "name": "STRATA",
+    "description": "Space and architecture studio",
+    "image": "/images/projects/studio-09.webp"
+  },
+  {
+    "name": "STRUCTURE",
+    "description": "Structural and spatial engineering",
+    "image": "/images/projects/studio-10.webp"
+  },
+  {
+    "name": "Bageera",
+    "description": "Energy performance solutions",
+    "image": "/images/projects/studio-11.webp"
+  },
+  {
+    "name": "LumenGrid",
+    "description": "Clean energy solutions",
+    "image": "/images/projects/studio-12.webp"
+  },
+  {
+    "name": "Kalipso",
+    "description": "AI-powered regulatory compliance",
+    "image": "/images/projects/studio-13.webp"
+  },
+  {
+    "name": "Ruang Hukum",
+    "description": "Legal services",
+    "image": "/images/projects/studio-14.webp"
+  },
+  {
+    "name": "AUREL Wealth",
+    "description": "Wealth management",
+    "image": "/images/projects/studio-15.webp"
+  },
+  {
+    "name": "Flowmint",
+    "description": "Fintech and receivables management",
+    "image": "/images/projects/studio-16.webp"
+  },
+  {
+    "name": "ARUS",
+    "description": "Swimming team and community",
+    "image": "/images/projects/studio-17.webp"
+  },
+  {
+    "name": "NORTHWILD",
+    "description": "Adventure and outdoor activities",
+    "image": "/images/projects/studio-18.webp"
+  },
+  {
+    "name": "Learnflow",
+    "description": "AI-powered learning platform",
+    "image": "/images/projects/studio-19.webp"
+  },
+  {
+    "name": "C12",
+    "description": "Quantum computing hardware",
+    "image": "/images/projects/studio-20.webp"
+  },
+  {
+    "name": "Nalar",
+    "description": "Technology and artificial intelligence",
+    "image": "/images/projects/studio-21.webp"
+  },
+  {
+    "name": "Revo",
+    "description": "AI-powered workspace",
+    "image": "/images/projects/studio-22.webp"
+  }
+]

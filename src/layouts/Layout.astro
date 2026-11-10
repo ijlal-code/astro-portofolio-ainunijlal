@@ -1,23 +1,108 @@
+---
+import '../styles/global.css';
+const isEnglish = Astro.url.pathname.startsWith('/en/');
+const lang = isEnglish ? 'en' : 'id';
+const title = isEnglish ? 'Ainun Ijlal | Web Developer Portfolio' : 'Ainun Ijlal | Portofolio Web Developer';
+const description = isEnglish
+  ? 'Ainun Ijlal is a web developer from Majene, Indonesia. Explore Laravel and web projects, experience, skills, and professional certificates.'
+  : 'Portofolio Ainun Ijlal, web developer dari Majene. Lihat proyek Laravel dan aplikasi web, pengalaman, keahlian, serta sertifikasi profesional.';
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : undefined;
+const idUrl = Astro.site ? new URL('/', Astro.site).href : undefined;
+const enUrl = Astro.site ? new URL('/en/', Astro.site).href : undefined;
+const image = Astro.site ? new URL('/images/projects/lms-pkl-dashboard.png', Astro.site).href : undefined;
+const person = {
+  '@context': 'https://schema.org', '@type': 'Person', name: 'Ainun Ijlal', jobTitle: 'Web Developer',
+  description, email: 'mailto:ijlalainun@gmail.com', ...(idUrl ? { url: idUrl } : {}),
+  address: { '@type': 'PostalAddress', addressLocality: 'Majene', addressRegion: 'Sulawesi Barat', addressCountry: 'ID' },
+  alumniOf: { '@type': 'CollegeOrUniversity', name: 'Universitas Sulawesi Barat' },
+  knowsLanguage: ['id', 'en'],
+  knowsAbout: ['Web development', 'HTML', 'CSS', 'JavaScript', 'Tailwind CSS', 'Laravel', 'Git', 'GitHub Actions', 'Figma'],
+  sameAs: ['https://www.linkedin.com/in/ainunijlal', 'https://github.com/ijlal-code', 'https://www.instagram.com/ainunijlal_ai/', 'https://www.tiktok.com/@ainunijlal', 'https://www.youtube.com/@ainunijlal', 'https://studio.ainunijlal.com/']
+};
+---
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+<html lang={lang}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title><meta name="description" content={description} />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#101312" />
+  <link rel="icon" type="image/png" href="/images/logo-ainun.png" />
+  {canonical && <link rel="canonical" href={canonical} />}
+  {idUrl && enUrl && <><link rel="alternate" hreflang="id" href={idUrl} /><link rel="alternate" hreflang="en" href={enUrl} /><link rel="alternate" hreflang="x-default" href={idUrl} /></>}
+  <meta property="og:type" content="website" /><meta property="og:locale" content={isEnglish ? "en_US" : "id_ID"} /><meta property="og:locale:alternate" content={isEnglish ? "id_ID" : "en_US"} /><meta property="og:site_name" content="Ainun Ijlal" />
+  <meta property="og:title" content={title} /><meta property="og:description" content={description} />
+  {canonical && <meta property="og:url" content={canonical} />}{image && <><meta property="og:image" content={image} /><meta property="og:image:alt" content={isEnglish ? "LMS Monitoring PKL project by Ainun Ijlal" : "Proyek LMS Monitoring PKL oleh Ainun Ijlal"} /></>}
+  <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+  <meta name="twitter:title" content={title} /><meta name="twitter:description" content={description} />
+  {image && <meta name="twitter:image" content={image} />}
+  <script type="application/ld+json" set:html={JSON.stringify(person).replace(/</g, '\\u003c')} />
+</head>
+<body><slot />
+<script>
+  // Native scrolling plus a single observer keeps the motion lightweight.
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (!reducedMotion.matches && 'IntersectionObserver' in window) {
+    const items = document.querySelectorAll('.hero-copy > *, .hero-visual, .section-label, .intro-grid h2, .intro-grid p, .intro-grid .text-link, .facts > div, .section-heading h2, .section-heading p, .featured, .studio-intro h2, .studio-intro p, .studio-intro .button, .studio-heading > *, .studio-card, .skill-groups > div, .certificate, .timeline article, .contact-grid h2, .contact-grid p, .contact-grid .button, .contact-details > div, .footer > *');
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      }
+    }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+    items.forEach((item, i) => {
+      item.classList.add('reveal', `reveal-${i % 4}`);
+      observer.observe(item);
+    });
+    reducedMotion.addEventListener('change', () => {
+      if (reducedMotion.matches) { observer.disconnect(); items.forEach(item => item.classList.add('is-visible')); }
+    });
+  }
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+  // Retain native details behavior without JavaScript; animate both directions when available.
+  document.querySelectorAll('details.more').forEach((details) => {
+    const summary = details.querySelector('summary');
+    const body = details.querySelector('.more-body');
+    if (!(summary instanceof HTMLElement) || !(body instanceof HTMLElement)) return;
+    const closeButton = body.querySelector('.more-close');
+    if (closeButton instanceof HTMLButtonElement) {
+      closeButton.hidden = false;
+      closeButton.addEventListener('click', () => summary.click());
+    }
+    let animation: Animation | null = null;
+    let revision = 0;
+    summary.addEventListener('click', (event) => {
+      event.preventDefault();
+      const closing = details.open;
+      const startHeight = closing ? body.getBoundingClientRect().height : 0;
+      revision += 1;
+      const currentRevision = revision;
+      if (animation) animation.cancel();
+      if (!closing) details.open = true;
+      const scrollToProjects = () => body.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
+      if (reducedMotion.matches || !body.animate) {
+        details.open = !closing;
+        if (!closing) scrollToProjects();
+        else summary.scrollIntoView({ behavior: 'auto', block: 'center' });
+        return;
+      }
+      const endHeight = closing ? 0 : body.scrollHeight;
+      animation = body.animate([
+        { height: `${startHeight}px`, opacity: closing ? 1 : 0 },
+        { height: `${endHeight}px`, opacity: closing ? 0 : 1 }
+      ], { duration: 380, easing: 'cubic-bezier(.2,.7,.2,1)' });
+      animation.finished.then(() => {
+        if (revision !== currentRevision) return;
+        if (closing) details.open = false;
+        animation = null;
+        if (!closing) scrollToProjects();
+        else summary.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }).catch(() => {});
+    });
+  });
+</script>
+</body>
+</html>

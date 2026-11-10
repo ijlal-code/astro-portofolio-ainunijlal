@@ -1,0 +1,112 @@
+[
+  {
+    "name": "ARAH",
+    "description": "Agensi kreatif dan kampanye",
+    "image": "/images/projects/studio-01.webp"
+  },
+  {
+    "name": "Media Quest",
+    "description": "Agensi pemasaran dan pertumbuhan merek",
+    "image": "/images/projects/studio-02.webp"
+  },
+  {
+    "name": "Northstar Studio",
+    "description": "Studio pertumbuhan bisnis",
+    "image": "/images/projects/studio-03.webp"
+  },
+  {
+    "name": "NŌVA Studio",
+    "description": "Studio kreatif dan pengalaman digital",
+    "image": "/images/projects/studio-04.webp"
+  },
+  {
+    "name": "Room & Pillar",
+    "description": "Venture studio dan portofolio bisnis",
+    "image": "/images/projects/studio-05.webp"
+  },
+  {
+    "name": "CONCRÈTE",
+    "description": "Manajemen properti",
+    "image": "/images/projects/studio-06.webp"
+  },
+  {
+    "name": "Ruang Karya",
+    "description": "Desain interior hunian",
+    "image": "/images/projects/studio-07.webp"
+  },
+  {
+    "name": "Ruang Reka",
+    "description": "Studio arsitektur",
+    "image": "/images/projects/studio-08.webp"
+  },
+  {
+    "name": "STRATA",
+    "description": "Studio ruang dan arsitektur",
+    "image": "/images/projects/studio-09.webp"
+  },
+  {
+    "name": "STRUCTURE",
+    "description": "Rekayasa struktur dan ruang",
+    "image": "/images/projects/studio-10.webp"
+  },
+  {
+    "name": "Bageera",
+    "description": "Solusi performa energi",
+    "image": "/images/projects/studio-11.webp"
+  },
+  {
+    "name": "LumenGrid",
+    "description": "Solusi energi bersih",
+    "image": "/images/projects/studio-12.webp"
+  },
+  {
+    "name": "Kalipso",
+    "description": "Kepatuhan regulasi berbasis AI",
+    "image": "/images/projects/studio-13.webp"
+  },
+  {
+    "name": "Ruang Hukum",
+    "description": "Layanan hukum",
+    "image": "/images/projects/studio-14.webp"
+  },
+  {
+    "name": "AUREL Wealth",
+    "description": "Pengelolaan kekayaan",
+    "image": "/images/projects/studio-15.webp"
+  },
+  {
+    "name": "Flowmint",
+    "description": "Fintech dan pengelolaan piutang",
+    "image": "/images/projects/studio-16.webp"
+  },
+  {
+    "name": "ARUS",
+    "description": "Tim dan komunitas renang",
+    "image": "/images/projects/studio-17.webp"
+  },
+  {
+    "name": "NORTHWILD",
+    "description": "Petualangan dan kegiatan alam",
+    "image": "/images/projects/studio-18.webp"
+  },
+  {
+    "name": "Learnflow",
+    "description": "Platform pembelajaran berbasis AI",
+    "image": "/images/projects/studio-19.webp"
+  },
+  {
+    "name": "C12",
+    "description": "Perangkat keras komputasi kuantum",
+    "image": "/images/projects/studio-20.webp"
+  },
+  {
+    "name": "Nalar",
+    "description": "Teknologi dan kecerdasan buatan",
+    "image": "/images/projects/studio-21.webp"
+  },
+  {
+    "name": "Revo",
+    "description": "Ruang kerja berbasis AI",
+    "image": "/images/projects/studio-22.webp"
+  }
+]
